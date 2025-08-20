@@ -24,7 +24,23 @@ A GraphQL API server built with Node.js and Apollo Server that provides access t
 npm install
 ```
 
-2. Start the server:
+2. Set up environment variables:
+```bash
+# Copy .env.example to .env
+cp .env.example .env
+
+# Or use this bash script to create .env from .env.example
+#!/bin/bash
+if [ -f .env.example ]; then
+    cp .env.example .env
+    echo "✅ .env file created from .env.example"
+else
+    echo "❌ .env.example file not found"
+    exit 1
+fi
+```
+
+3. Start the server:
 ```bash
 npm start
 ```
@@ -38,7 +54,7 @@ npm run dev
 
 The API requires Bearer token authentication. Use the following token in your requests:
 
-**Token:** `your-secret-bearer-token-here`
+**Token:** `supersecrettoken`
 
 ### Example Headers
 ```
@@ -247,7 +263,7 @@ query {
 
 ## Data Structure
 
-The API serves data from the following JSON files:
+The API serves data from the following JSON files located in `src/data/source/`:
 - `node.json` - Node objects with relationships
 - `action.json` - Action objects
 - `trigger.json` - Trigger objects  
@@ -271,6 +287,12 @@ src/
 │   ├── typeDefs.js      # GraphQL schema definitions
 │   └── resolvers.js     # GraphQL resolvers
 ├── data/
+│   ├── source/          # JSON data source files
+│   │   ├── node.json
+│   │   ├── action.json
+│   │   ├── trigger.json
+│   │   ├── response.json
+│   │   └── resourceTemplate.json
 │   ├── actions.js       # Action data loader
 │   ├── triggers.js      # Trigger data loader
 │   ├── responses.js     # Response data loader
