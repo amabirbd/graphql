@@ -1,0 +1,26 @@
+{
+  "name": "graphql-api-server",
+  "version": "1.0.0",
+  "description": "GraphQL API Server with Apollo Server",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.12.1",
+    "dotenv": "^17.2.1",
+    "graphql": "^16.8.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "graphql",
+    "apollo-server",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT"
+}
