@@ -58,7 +58,7 @@ The API requires Bearer token authentication. Use the following token in your re
 
 ### Example Headers
 ```
-Authorization: Bearer your-secret-bearer-token-here
+Authorization: Bearer supersecrettoken
 ```
 
 ## API Endpoints
