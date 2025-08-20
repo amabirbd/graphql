@@ -199,7 +199,7 @@ query {
 2. In the HTTP HEADERS section (bottom left), add:
 ```json
 {
-  "Authorization": "Bearer your-secret-bearer-token-here"
+  "Authorization": "supersecrettoken"
 }
 ```
 3. Write your GraphQL queries in the main editor
